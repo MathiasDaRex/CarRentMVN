@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 
@@ -32,6 +33,14 @@ public class ResApproved {
 	@OneToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "carId", nullable = false, insertable = false, updatable = false)
 	private Cars cars;
+	
+	@ManyToOne(fetch = FetchType.LAZY,optional = false)
+	@JoinColumn(name = "userId", nullable = false, insertable = false, updatable = false)
+	private Users userApp;
+	
+	@OneToOne(fetch = FetchType.LAZY,optional = false)
+	@JoinColumn(name = "adminId", nullable = false, insertable = false, updatable = false)
+	private Admin admin;
 
 	
 	public ResApproved() {

@@ -16,8 +16,8 @@ public class Cars {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer carId;
 	private String carBrand;
-	private String carTypeName;
-	private Integer carTypeId;
+	private String carType;
+	private Integer carCategoryId;
 	private Integer picId;
 	private Integer manYear;
 	private String licPlate;
@@ -30,21 +30,21 @@ public class Cars {
 	private Integer dailyCost;
 	
 	@OneToOne(fetch = FetchType.LAZY, optional = false)
-	@JoinColumn(name = "carTypeId", nullable = false, insertable = false, updatable = false)
-	private CarType carType;
+	@JoinColumn(name = "carCategoryId", nullable = false, insertable = false, updatable = false)
+	private CarCategory carCategory;
 	
 	@OneToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "picId", nullable = false, insertable = false, updatable = false)
 	private CarPics pics;
 	
 
-	public Cars(Integer carId, String carBrand, String carTypeName, Integer carTypeId, Integer picId, Integer manYear,
+	public Cars(Integer carId, String carBrand, String carType, Integer carCategoryId, Integer picId, Integer manYear,
 			String licPlate, String color, String fuel, Integer engineCapacity, Double fuelCons, Integer persons,
 			Boolean aircon, Integer dailyCost) {
 		this.carId = carId;
 		this.carBrand = carBrand;
-		this.carTypeName = carTypeName;
-		this.carTypeId = carTypeId;
+		this.carType = carType;
+		this.carCategoryId = carCategoryId;
 		this.picId = picId;
 		this.manYear = manYear;
 		this.licPlate = licPlate;
@@ -64,141 +64,117 @@ public class Cars {
 		return carId;
 	}
 
-
 	public void setCarId(Integer carId) {
 		this.carId = carId;
 	}
-
 
 	public String getCarBrand() {
 		return carBrand;
 	}
 
-
 	public void setCarBrand(String carBrand) {
 		this.carBrand = carBrand;
 	}
 
-
-	public String getCarTypeName() {
-		return carTypeName;
+	public String getCarType() {
+		return carType;
 	}
 
-
-	public void setCarTypeName(String carTypeName) {
-		this.carTypeName = carTypeName;
+	public void setCarType(String carType) {
+		this.carType = carType;
 	}
 
-
-	public Integer getCarTypeId() {
-		return carTypeId;
+	public Integer getCarCategoryId() {
+		return carCategoryId;
 	}
 
-
-	public void setCarTypeId(Integer carTypeId) {
-		this.carTypeId = carTypeId;
+	public void setCarCategoryId(Integer carCategoryId) {
+		this.carCategoryId = carCategoryId;
 	}
-
 
 	public Integer getPicId() {
 		return picId;
 	}
 
-
 	public void setPicId(Integer picId) {
 		this.picId = picId;
 	}
-
 
 	public Integer getManYear() {
 		return manYear;
 	}
 
-
 	public void setManYear(Integer manYear) {
 		this.manYear = manYear;
 	}
-
 
 	public String getLicPlate() {
 		return licPlate;
 	}
 
-
 	public void setLicPlate(String licPlate) {
 		this.licPlate = licPlate;
 	}
-
 
 	public String getColor() {
 		return color;
 	}
 
-
 	public void setColor(String color) {
 		this.color = color;
 	}
-
 
 	public String getFuel() {
 		return fuel;
 	}
 
-
 	public void setFuel(String fuel) {
 		this.fuel = fuel;
 	}
-
 
 	public Integer getEngineCapacity() {
 		return engineCapacity;
 	}
 
-
 	public void setEngineCapacity(Integer engineCapacity) {
 		this.engineCapacity = engineCapacity;
 	}
-
 
 	public Double getFuelCons() {
 		return fuelCons;
 	}
 
-
 	public void setFuelCons(Double fuelCons) {
 		this.fuelCons = fuelCons;
 	}
-
 
 	public Integer getPersons() {
 		return persons;
 	}
 
-
 	public void setPersons(Integer persons) {
 		this.persons = persons;
 	}
-
 
 	public Boolean getAircon() {
 		return aircon;
 	}
 
-
 	public void setAircon(Boolean aircon) {
 		this.aircon = aircon;
 	}
-
 
 	public Integer getDailyCost() {
 		return dailyCost;
 	}
 
-
 	public void setDailyCost(Integer dailyCost) {
 		this.dailyCost = dailyCost;
 	}
 
+	
+	
+	
 
 
 

@@ -2,8 +2,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="common_header.jsp"%>
 
+
+
 <div class="row">
 	<div class="col-sm-12">
+			<a class="btn btn-primary btn-sm float-right" href="new">Új autó 
+				<i class="far fa-plus-square"></i></a>
 			<div class="jumbotron bg-dark text-white">
 				<h1 class="display-4 text-center">Autóink</h1>
 			</div>
@@ -42,38 +46,9 @@
 						</td> 
 		    		</tr>
 		    	</c:forEach>
-
 		    </tbody>
-	<!-- 	     <tr> -->
-	<!-- 	         <td><img src="img/f40.jpg" alt="F40" width="50%" height="auto"></td> -->
-	<!-- 	         <td>Ferrari</td> -->
-	<!-- 	         <td>F40</td> -->
-	<!-- 	         <td>Benzin</td> -->
-	<!-- 	         <td>Nincs</td> -->
-	<!-- 	         <td>500000</td> -->
-	<!-- 	         <td><a href="reserve.html" class="btn btn-primary btn-md active float-right text-center ">Foglalás</a></td> -->
-	<!-- 	     </tr> -->
-	<!--         <tr> -->
-	<!--             <td><img src="img/GT-R.jpg" alt="GT-R" width="50%" height="auto"></td> -->
-	<!--             <td>Nissan</td> -->
-	<!--             <td>GT-R</td> -->
-	<!--             <td>Benzin</td> -->
-	<!--             <td>Van</td> -->
-	<!--             <td>350000</td> -->
-	<!--             <td><a href="reserve.html" class="btn btn-primary btn-md active float-right text-center ">Foglalás</a></td> -->
-	
-	<!--         </tr> -->
-	<!--         <tr> -->
-	<!--             <td><img src="img/supra.jpg" alt="supra" width="50%" height="auto"></td> -->
-	<!--             <td>Toyota</td> -->
-	<!--             <td>Supra</td> -->
-	<!--             <td>Benzin</td> -->
-	<!--             <td>Van</td> -->
-	<!--             <td>3600000</td> -->
-	<!--             <td><a href="reserve.html" class="btn btn-primary btn-md active float-right text-center ">Foglalás</a></td> -->
-	<!--         </tr> -->
 	    </table>
     </div>
-</div>
+</div>				
 
-<%@include file="common_footer.jsp" %>
+<%@include file="common_footer.jsp"%>

@@ -29,4 +29,43 @@ public class CarListController {
 
 	}
 	
+	@GetMapping("crs/home/")
+	public String viewIndex(Model model) {
+		System.out.println("itt a kibaszott főoldal geci");
+		return "home";
+	}
+	
+	@GetMapping("crs/rules/")
+	public String viewRules(Model model) {
+		return "rules";
+	}
+	
+	@GetMapping("crs/faq/")
+	public String viewFaq(Model model) {
+		return "faq";
+	}
+	
+	@GetMapping("crs/login/")
+	public String viewLogin(Model model) {
+		return "login";
+	}
+	
+	@GetMapping("crs/reg/")
+	public String viewReg(Model model) {
+		return "reg";
+	}
+	
+	@GetMapping("crs/contact/")
+	public String viewContact(Model model) {
+		return "contact";
+	}
+	
+	@GetMapping("crs/admin/cars")
+	public String viewAdminCars(Model model) {
+		List<Cars> all = cs.getAll();
+		model.addAttribute("cars", all);
+		return "adminCars";
+	}
+	
+	
 }

@@ -3,9 +3,13 @@ package hu.mathiasProjects.carRent.entity;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class ResReq {
@@ -18,6 +22,16 @@ public class ResReq {
 	private Date borrowDate;
  	private Date backDate;
 	private Integer price;
+	
+	@OneToOne(fetch = FetchType.LAZY, optional = false)
+	@JoinColumn(name = "carId", nullable = false, insertable = false, updatable = false)
+	private Cars cars;
+	
+	@ManyToOne(fetch = FetchType.LAZY,optional = false)
+	@JoinColumn(name = "userId", nullable = false, insertable = false, updatable = false)
+	private Users userReq;
+	
+	
 	
 	public ResReq(Integer reqId, Integer carId, Integer userId, Date borrowDate, Date backDate, Integer price) {
 		super();

@@ -1,11 +1,13 @@
 package hu.mathiasProjects.carRent.entity;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Users {
@@ -20,6 +22,14 @@ public class Users {
 	private String tel;
 	private Date birthDate;
 	private String gender;
+	
+	@OneToMany(mappedBy = "userReq")
+	private List<ResReq> resReq;
+	
+	@OneToMany(mappedBy = "userApp")
+	private List<ResApproved> resApproved;
+	
+	
 	
 
 	public Users(Long userId, String username, String hashPwd, String fullName, String email, String tel,
