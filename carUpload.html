@@ -5,124 +5,159 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>North Star Rental</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">    <title>North Star Rental</title>
 </head>
 <body class="bg-secondary">
-  
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-       
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="home"><i class="fas fa-car"></i>North Star Rental<span class="sr-only ml-2">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cars">Aut�k</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="rules">Aut�b�rl�si szab�lyzat</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact">Kapcsolat</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="faq">GYIK</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-          <li class="nav-item active mr-1">
-            <a href="login" class="nav-link">Bejelentkez�s</a>
-          </li>
-          <li class="nav-item active mr-1">
-            <a href="reg" class="nav-link">Regisztr�ci�</a>
-          </li>
-        </ul>
-     
-       
-     
-        <!--  <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      -->
-      </div>
-    </nav>
-
-    <div class="container-lg">
-
-<div class="row">
-	<div class="col-sm-12 mt-4">
-			<div class="jumbotron bg-dark text-white">
-				<h1 class="display-4 text-center">Autó feltöltés</h1>
-				<a class="btn btn-primary btn-sm float-right" href="new">Új autó 
-				<i class="far fa-plus-square"></i></a>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		
+  <div class="container">
+        <div class="row ">
+            <div class="col-sm-12 mt-4">
+                    <div class="jumbotron bg-dark text-white">
+                        <h1 class="display-4 text-center">Autó feltöltés</h1>
+                        <a class="btn btn-primary btn-sm float-right" href="new">Új autó 
+                        <i class="far fa-plus-square"></i></a>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
         
-        <div class="col-sm-12">
-			<form action="" method="post">
-				<div class="row">
-					<div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="carBrand">Autó márkája</label>
-                            <input type="text" class="form-control" id="carBrand" name="carBrand" required>
+        
+            <div class="col-sm-12 mt-4">
+                <form action="" method="post" class="row g-3">
+                    
+                        <div class="col-md-4">
+                            <div class="input-group col-md-3 mb-3">
+                                <span class="input-group-text" id="carBrand">Autó márkája</span>
+                                <input id="carBrand" type="text" class="form-control md-3" name="carBrand" aria-label="Sizing example input" aria-describedby="carBrand" required>
+                            </div>
+                               
+                            
                         </div>
-					</div>
-					<div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="carTypeName">Autó típusa</label>
-                            <input type="text" class="form-control" id="carTypeName" name="carTypeName" required>
+                        <div class="col-md-4">
+                            <div class="input-group col-md-3 mb-3">
+                                <span class="input-group-text" id="carType">Autó típusa</span>
+                                <input id="carType" type="text" class="form-control md-3" name="carType" aria-label="Sizing example input" aria-describedby="carType" required>
+                            </div>
+                                
+                            
                         </div>
-					</div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="fuel">Üzemanyag</label>
-                            <input type="text" class="form-control" id="fuel" name="fuel" required>
+                        <div class="col-sm-4 mb-3">
+
+                            <div class="input-group">
+                            
+                                <label class="input-group-text" for="carCategory">Autó fajtája</label>
+                                <select class="form-select" id="carCategory">
+                                  <option selected>Kérem válasszon...</option>
+                                  <option value="1">Sport</option>
+                                  <option value="2">Sedan</option>
+                                  <option value="3">Hatchback</option>
+                                </select>
+                                 
+                            </div>
+                               
+
                         </div>
-					</div>
-                    <div class="col-sm-6">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="airconYes">
-                            <label class="form-check-label" for="airconYes">
-                            Van klíma
-                            </label>
+                        
+                        
+                        <div class="col-md-3 ">
+                            <div class="input-group col-md-3 mb-3">
+                                <span class="input-group-text" id="manYear">Gyártási év</span>
+                                <input id="manYear" type="number" class="form-control md-3" name="manYear" aria-label="Sizing example input" aria-describedby="manYear" required>
+                            </div>
                         </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="airconNo" checked>
-                            <label class="form-check-label" for="airconNo">
-                            Nincs klíma
-                            </label>
+                        
+                        <div class="col-md-3">
+                            <div class="input-group col-md-3 mb-3">
+                                <span class="input-group-text" id="manYear">Rendszám</span>
+                                <input id="licPlate" type="text" class="form-control md-3" name="licPlate" aria-label="Sizing example input" aria-describedby="licPlate" required>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="col-md-3">
+                            <div class="input-group col-md-3 mb-3">
+                                <span class="input-group-text" id="color">Szín</span>
+                                <input id="color" type="text" class="form-control md-3"  name="color" aria-label="Sizing example input" aria-describedby="color" required>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-3">
+                            <div class="input-group col-md-3 mb-3">
+                                <span class="input-group-text" id="fuel">Üzemanyag</span>
+                                <input id="fuel" type="text" class="form-control md-3"  name="fuel" aria-label="Sizing example input" aria-describedby="fuel" required>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-3 mb-3">
+                            <div class="input-group col-md-3">
+                                <span class="input-group-text" id="engineCapacity">Motor térfogat</span>
+                                <input id="engineCapacity" type="number" class="form-control md-3"  name="engineCapacity" aria-label="Sizing example input" aria-describedby="engineCapacity" required>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="col-sm-3 mb-3">
+                            
+                            <div class="input-group col-md-3">
+                                <span class="input-group-text" id="fuelCons">Átlagfogyasztás</span>
+                                <input id="fuelCons" type="number" step=".1" class="form-control md-3"  name="fuelCons" aria-label="Sizing example input" aria-describedby="fuelCons" required>
+                            </div>
+                           
+                        </div>
+                        
+                        <div class="col-sm-3 mb-3">
+                            <div class="input-group col-md-3">
+                                <span class="input-group-text" id="persons">Szállítható személyek</span>
+                                <input id="persons" type="number" class="form-control md-3"  name="persons" aria-label="Sizing example input" aria-describedby="persons" required>
+                            </div>
+                            
+                        </div>
+                        
+                        
+                        <div class="col-sm-3 mb-3">
+                            <div class="input-group col-md-3">
+                                <span class="input-group-text" id="dailyCost">Napi ár</span>
+                                <input id="dailyCost" type="number" class="form-control md-3"  name="dailyCost" aria-label="Sizing example input" aria-describedby="dailyCost" required>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                        <div class="col-sm-3 mb-3 input-group">
+                            <label class="input-group-text" for="picUp">Töltsön fel egy képet:</label>
+
+                                <input type="file" class="form-control col-sm-6" aria-label="Töltsön fel egy képet" id="picUp" required>
+                            
+                        </div>  
+                            
+                        </div>
+                        <div class="col-4">
+                        <div class="input-group">
+                            
+                            <label class="input-group-text" for="airconSelect">Klíma</label>
+                            <select class="form-select" id="airconSelect">
+                              <option selected>Kérem válasszon...</option>
+                              <option value="1">Van</option>
+                              <option value="2">Nincs</option>
+                            </select>
+                             
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="dailyCost">Napi ár</label>
-                            <input type="Integer" class="form-control" id="dailyCost" name="dailyCost" required>
-                        </div>
-					</div>
-                    <div class="col-sm-6">
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="pic">
-                            <label class="custom-file-label" for="pic">Kép feltöltése</label>
-                          </div>
-					</div>
-				</div>
-				<div class="d-flex justify-content-between bg-dark text-white p-2" >
-					<a class="btn btn-warning" href="list"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Vissza</a>
-					<button type="submit" class="btn btn-success">Mentés <i class="fas fa-save"></i></button>
-				</div>
-			</form>
-		</div>
-</div>
-</div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+                        
+
+
+                        <div class="col-sm-4 mb-2"><small id="picUpDescription" class="form-text text-light">
+                            Kérem csak 4:3-as méretarányú képet töltsön fel.
+                          </small></div>
+          
+                    
+                    <!-- EZ MÉG NEM TÖLT FEL VALAMIÉRT -->
+                    <div class="d-flex justify-content-between bg-dark text-white p-2 mt-4 mb-4 rounded" >
+                        <a class="btn btn-warning" href="/crs/admin/cars/"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Vissza</a>
+                        <button type="submit" class="btn btn-success">Mentés <i class="fas fa-save"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/ce481f0017.js" crossorigin="anonymous"></script>
 </body>
 </html>
